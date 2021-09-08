@@ -5,6 +5,7 @@ const fs = require('fs');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(__dirname + '/images'));
 
 const routes = require('./routes/routes.js')(app, fs);
 
